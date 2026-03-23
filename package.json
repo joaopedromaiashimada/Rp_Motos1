@@ -4,12 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "npm run dev --prefix apps/web",
-    "build": "concurrently --raw \"npm run build --prefix apps/web\"",
+    "build": "npm run build --prefix apps/web",
     "start": "npm run start --prefix apps/web",
-    "lint": "concurrently --raw \"npm run lint --prefix apps/web\""
-  },
-  "devDependencies": {
-    "concurrently": "^9.1.2"
+    "lint": "npm run lint --prefix apps/web"
   },
   "workspaces": [
     "apps/*"
