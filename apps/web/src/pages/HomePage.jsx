@@ -108,7 +108,7 @@ export default function HomePage() {
               Encontre sua próxima moto com qualidade e procedência
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Motos revisadas, procedência garantida e atendimento especializado
+              Compra • Venda • Troca • Financiamento
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/catalogo">
