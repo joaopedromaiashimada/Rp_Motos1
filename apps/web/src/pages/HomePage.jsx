@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ShieldCheck, Wrench, CreditCard, Users, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Wrench, CreditCard, Users, ArrowRight, Check } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import FloatingWhatsAppButton from '@/components/FloatingWhatsAppButton.jsx';
@@ -81,8 +81,11 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>RP Motos - Motos com qualidade e procedência garantida</title>
-        <meta name="description" content="Encontre sua próxima moto na RP Motos. Motos revisadas, procedência garantida e atendimento especializado em Piracicaba." />
+        <title>RP Motos - Compra, venda, troca e financiamento de motos</title>
+        <meta
+          name="description"
+          content="Encontre sua próxima moto na RP Motos. Compra, venda, troca e financiamento com procedência garantida e atendimento rápido no WhatsApp."
+        />
       </Helmet>
 
       <Header />
@@ -95,7 +98,7 @@ export default function HomePage() {
             alt="Motocicleta esportiva"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/75" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -104,24 +107,54 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance" style={{ letterSpacing: '-0.02em' }}>
-              Encontre sua próxima moto com qualidade e procedência
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-5xl mx-auto leading-tight text-balance"
+              style={{ letterSpacing: '-0.02em' }}
+            >
+              Compra, venda, troca e financiamento de motos com procedência garantida
             </h1>
+
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Compra • Venda • Troca • Financiamento
+              Atendimento rápido e negociação facilitada direto no WhatsApp
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/catalogo">
-                <Button size="lg" className="bg-primary hover:bg-primary-dark text-white px-10 py-7 text-lg transition-all duration-200 active:scale-[0.98]">
-                  Ver catálogo
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary-dark text-white px-10 py-7 text-lg transition-all duration-200 active:scale-[0.98]"
+                >
+                  Ver motos disponíveis
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
+
               <a href={generateDefaultWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20 px-10 py-7 text-lg transition-all duration-200 active:scale-[0.98]">
-                  Falar no WhatsApp
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20 px-10 py-7 text-lg transition-all duration-200 active:scale-[0.98]"
+                >
+                  Falar agora no WhatsApp
                 </Button>
               </a>
+            </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-white/90">
+              <div className="flex items-center gap-2 text-sm md:text-base">
+                <Check className="w-4 h-4 text-primary" />
+                <span>Motos revisadas</span>
+              </div>
+              <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-white/40" />
+              <div className="flex items-center gap-2 text-sm md:text-base">
+                <Check className="w-4 h-4 text-primary" />
+                <span>Procedência garantida</span>
+              </div>
+              <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-white/40" />
+              <div className="flex items-center gap-2 text-sm md:text-base">
+                <Check className="w-4 h-4 text-primary" />
+                <span>Atendimento rápido</span>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -136,7 +169,10 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.02em' }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+              style={{ letterSpacing: '-0.02em' }}
+            >
               Por que escolher a RP Motos
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -169,7 +205,10 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.02em' }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+              style={{ letterSpacing: '-0.02em' }}
+            >
               Motos em destaque
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -193,7 +232,10 @@ export default function HomePage() {
 
           <div className="text-center mt-12">
             <Link to="/catalogo">
-              <Button size="lg" className="bg-primary hover:bg-primary-dark text-white transition-all duration-200 active:scale-[0.98]">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary-dark text-white transition-all duration-200 active:scale-[0.98]"
+              >
                 Ver todas as motos
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -211,7 +253,10 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.02em' }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+              style={{ letterSpacing: '-0.02em' }}
+            >
               O que nossos clientes dizem
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -237,8 +282,16 @@ export default function HomePage() {
 
       <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundSize: '40px 40px'
+            }}
+          />
         </div>
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -246,20 +299,32 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" style={{ letterSpacing: '-0.02em' }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-white mb-6"
+              style={{ letterSpacing: '-0.02em' }}
+            >
               Pronto para encontrar sua moto ideal?
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Entre em contato conosco e descubra as melhores opções do mercado
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/catalogo">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-12 py-7 text-lg transition-all duration-200 active:scale-[0.98]">
+                <Button
+                  size="lg"
+                  className="bg-white text-primary hover:bg-white/90 px-12 py-7 text-lg transition-all duration-200 active:scale-[0.98]"
+                >
                   Ver catálogo completo
                 </Button>
               </Link>
+
               <a href={generateDefaultWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="bg-black text-white border-black hover:bg-black/90 px-12 py-7 text-lg transition-all duration-200 active:scale-[0.98]">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-black text-white border-black hover:bg-black/90 px-12 py-7 text-lg transition-all duration-200 active:scale-[0.98]"
+                >
                   Falar no WhatsApp
                 </Button>
               </a>
