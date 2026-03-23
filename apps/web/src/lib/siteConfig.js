@@ -5,5 +5,5 @@ export const GOOGLE_MAPS_LINK = 'https://www.google.com/maps/search/?api=1&query
 export const CONTACT_PHONES = ['(19) 99616-9547', '(19) 99403-4605'];
 export const CONTACT_PHONE_PRIMARY = CONTACT_PHONES[0];
 export const CONTACT_PHONE_SECONDARY = CONTACT_PHONES[1];
-export const LOGO_PATH = '/rp-motos-logo.png';
+export const LOGO_PATH = '/teste1.png';
 export const COMPANY_NAME = 'RP Motos';
